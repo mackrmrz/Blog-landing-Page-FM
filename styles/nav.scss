@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+
+$button-color: #f84c5a;
+$header-bg: #fa8c70;
+$white-bg: #fff;
+
+
+header {
+  background: linear-gradient(
+      125deg,
+      rgba(250, 140, 112, 1) 0%,
+      rgba(248, 72, 89, 0.8729866946778712) 35%
+    ),
+    url('/images/bg-pattern-intro.svg') no-repeat center center / contain;
+  height: 100vh;
+  position: relative;
+  border-bottom-left-radius: 20%;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+
+      .left-side {
+        margin-left: 33px;
+        font-size: 1.5em;
+
+        a {
+          color: white;
+          padding: 20px;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .active-class {
+      display: block;
+      color: white;
+      cursor: pointer;
+      background-color: white;
+    }
+
+    .burger {
+      padding: 33px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      //MIXINS FOR THE BUTTONS IN THE NAV AND HEADER
+      .hero-button {
+        margin: 20px;
+        padding: 10px;
+        border-radius: 33px;
+        width: 150px;
+        font-size: 0.7em;
+      }
+      .right-links {
+        .white {
+          background: $white-bg;
+          border: none;
+          color: $button-color;
+          font-size: 1.2em;
+        }
+
+        .red {
+          background: transparent;
+          color: $white-bg;
+          border: none;
+          font-size: 1.2em;
+        }
+      }
+
+      .burger-icon {
+        display: none;
+      }
+    }
+  }
+
+  .header-title {
+    position: absolute;
+    right: 33%;
+    bottom: 33%;
+    color: $white-bg;
+    font-size: 1.75em;
+
+    h1 {
+      text-align: center;
+      font-weight: 400;
+    }
+
+    p {
+      font-weight: 100;
+    }
+
+    .hero-button-container {
+      width: 100%;
+      display: inline;
+
+      .hero-button {
+        margin: 20px;
+        padding: 10px;
+        border-radius: 33px;
+        width: 150px;
+        font-size: 0.7em;
+      }
+
+      .white {
+        background: $white-bg;
+        border: none;
+        color: $button-color;
+      }
+
+      .red {
+        background: transparent;
+        color: $white-bg;
+        border: 1px solid $white-bg;
+      }
+    }
+  }
+}
